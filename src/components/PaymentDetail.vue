@@ -8,16 +8,16 @@
       <h3>费用项详情</h3>
       <table>
         <thead>
-          <tr>
-            <th>费用项</th>
-            <th>金额</th>
-          </tr>
+        <tr>
+          <th>费用项</th>
+          <th>金额</th>
+        </tr>
         </thead>
         <tbody>
-          <tr v-for="item in paymentDetails" :key="item.id">
-            <td>{{ item.itemName }}</td>
-            <td>{{ item.amount }} 元</td>
-          </tr>
+        <tr v-for="item in paymentDetails" :key="item.id">
+          <td>{{ item.itemName }}</td>
+          <td>{{ item.amount }} 元</td>
+        </tr>
         </tbody>
       </table>
     </div>
@@ -27,7 +27,6 @@
 
 <script>
 import axios from 'axios';
-// import { useRoute, useRouter } from 'vue-router';
 export default {
   data() {
     return {
@@ -45,7 +44,7 @@ export default {
           this.bill = response.data.data.bill;
           this.paymentDetails = response.data.data.paymentDetails;
         } else {
-          
+
           alert(response.data.msg || "获取账单详情失败");
         }
       } catch (error) {

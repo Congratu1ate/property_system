@@ -2,10 +2,11 @@
   <div id="app">
     <router-view></router-view> <!-- 这里是显示当前匹配的组件 -->
 <!--    <BillManagement/>-->
+
   </div>
 </template>
 
-<script>
+<script lang="js" setup name="app">
 import BillManagement from './components/BillManagement.vue';
 
 // export default {
